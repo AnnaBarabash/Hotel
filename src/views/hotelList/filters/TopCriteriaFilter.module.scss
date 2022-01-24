@@ -1,0 +1,20 @@
+.topCriteriaCheckbox {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+
+  & .label {
+    display: flex;
+    align-items: center;
+
+    & svg {
+      margin-right: 10px;
+    }
+  }
+
+  & .checkbox {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+}

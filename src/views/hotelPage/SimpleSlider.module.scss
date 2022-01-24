@@ -1,0 +1,22 @@
+.container {
+  display: contents;
+  margin-top: 3%;
+  width: 100%;
+}
+
+.slider {
+  max-height: 500px;
+}
+
+.slide {
+  display: inline;
+
+  width: 100%;
+  max-height: 500px;
+}
+
+// @media screen and (max-width: 600px) and (min-device-width: 320px) {
+//   .slider {
+//     display: none;
+//   }
+// }

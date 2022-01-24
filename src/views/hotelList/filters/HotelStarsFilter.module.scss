@@ -1,0 +1,11 @@
+.rating {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+
+  & .checkbox {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+  }
+}

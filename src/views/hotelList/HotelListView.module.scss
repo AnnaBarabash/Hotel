@@ -1,0 +1,21 @@
+.container {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+.hotelListView {
+  display: flex;
+  background-color: rgb(242, 242, 242);
+}
+
+.sortByFilter {
+  width: 80%;
+  background-color: rgb(242, 242, 242);
+  margin-left: 1%;
+}
+
+@media screen and (max-width: 600px) {
+  .filterHotels {
+    display: none;
+  }
+}

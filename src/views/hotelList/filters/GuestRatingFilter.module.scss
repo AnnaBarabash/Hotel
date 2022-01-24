@@ -1,0 +1,22 @@
+.ratings {
+  display: flex;
+  column-gap: 3px;
+
+  & .rating {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: rgba(44, 31, 31, 0.157);
+    font-weight: 600;
+    color: rgb(126, 126, 126);
+    cursor: pointer;
+
+    &.checked {
+      background-color: #ff7500;
+      color: white;
+    }
+  }
+}

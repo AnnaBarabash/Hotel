@@ -1,0 +1,11 @@
+.sortByFilter {
+  background-color: rgb(255, 255, 255);
+
+  align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+  .hotelListPagination {
+    display: none;
+  }
+}
