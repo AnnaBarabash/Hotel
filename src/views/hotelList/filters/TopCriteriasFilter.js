@@ -2,17 +2,24 @@ import EmojiFoodBeverageIcon from '@mui/icons-material/EmojiFoodBeverage'
 import LocalParkingIcon from '@mui/icons-material/LocalParking'
 import MoneyOffIcon from '@mui/icons-material/MoneyOff'
 import WifiIcon from '@mui/icons-material/Wifi'
-import React, { useState } from 'react'
+import React from 'react'
+import { useDispatch } from 'react-redux'
 
-import { TOP_CRITERIA_FILTER_INITIAL_STATE } from '../../../shared/constants'
-import styles from './TopCriteriaFilter.module.scss'
+import { hotelListSlice } from '../../../store/slices/hotelListSlice'
+import styles from './TopCriteriasFilter.module.scss'
 
-export function TopCriteriaFilter() {
-  const [state, setState] = useState(TOP_CRITERIA_FILTER_INITIAL_STATE)
+export function TopCriteriasFilter(props) {
+  const dispatch = useDispatch()
+
+  const { state } = props
 
   function changeCheckboxState(evt) {
-    const { checked, value } = evt.currentTarget
-    setState({ ...state, ...{ [value]: checked } })
+    const { value, checked } = evt.currentTarget
+    dispatch(
+      hotelListSlice.actions.setFilters({
+        topCriterias: { ...state, [value]: checked },
+      })
+    )
   }
 
   return (
@@ -27,7 +34,7 @@ export function TopCriteriaFilter() {
           type='checkbox'
           checked={state['BREAKFAST_INCLUDED']}
           value='BREAKFAST_INCLUDED'
-          onClick={changeCheckboxState}
+          onChange={changeCheckboxState}
           className={styles.checkbox}
         />
       </div>
@@ -40,7 +47,7 @@ export function TopCriteriaFilter() {
           type='checkbox'
           checked={state['FREECANCEL']}
           value='FREECANCEL'
-          onClick={changeCheckboxState}
+          onChange={changeCheckboxState}
           className={styles.checkbox}
         />
       </div>
@@ -53,7 +60,7 @@ export function TopCriteriaFilter() {
           type='checkbox'
           checked={state['FREEWLAN']}
           value='FREEWLAN'
-          onClick={changeCheckboxState}
+          onChange={changeCheckboxState}
           className={styles.checkbox}
         />
       </div>
@@ -66,7 +73,7 @@ export function TopCriteriaFilter() {
           type='checkbox'
           checked={state['CARPARKDIRECTLYATHOTEL']}
           value='CARPARKDIRECTLYATHOTEL'
-          onClick={changeCheckboxState}
+          onChange={changeCheckboxState}
           className={styles.checkbox}
         />
       </div>

@@ -1,21 +1,55 @@
 .container {
-  margin-top: 40px;
+  margin-top: 20px;
   padding-bottom: 40px;
-}
 
-.hotelListView {
-  display: flex;
-  background-color: rgb(242, 242, 242);
-}
+  & .breadcrumbs {
+    margin: 0 0 10px 20px;
+    font-size: 18px;
 
-.sortByFilter {
-  width: 80%;
-  background-color: rgb(242, 242, 242);
-  margin-left: 1%;
-}
+    & a {
+      &:hover {
+        text-decoration: none;
+      }
 
-@media screen and (max-width: 600px) {
-  .filterHotels {
-    display: none;
+      &:visited {
+        color: #000;
+      }
+    }
+  }
+
+  & .hotelListView {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 20px;
+    background-color: rgb(242, 242, 242);
+  }
+
+  & .desktopFilters {
+    @media screen and (max-width: 860px) {
+      display: none;
+    }
+  }
+
+  & .mobileFilters {
+    @media screen and (min-width: 861px) {
+      display: none;
+    }
+
+    & .button {
+      position: fixed;
+      left: calc(50% - 70px);
+      bottom: 20px;
+      width: 140px;
+      height: 50px;
+      font-size: 18px;
+      color: #fff;
+      border: 1px solid gray;
+      background-color: #009ae3;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0098df;
+      }
+    }
   }
 }

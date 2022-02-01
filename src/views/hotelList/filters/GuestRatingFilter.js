@@ -1,16 +1,25 @@
 import Typography from '@mui/material/Typography'
 import clsx from 'clsx'
-import React, { useState } from 'react'
+import React from 'react'
+import { useDispatch } from 'react-redux'
 
-import { GUEST_RATING_FILTER_INITIAL_STATE } from '../../../shared/constants'
+import { hotelListSlice } from '../../../store/slices/hotelListSlice'
 import styles from './GuestRatingFilter.module.scss'
 
-export function GuestRatingFilter() {
-  const [state, setState] = useState(GUEST_RATING_FILTER_INITIAL_STATE)
+export function GuestRatingFilter(props) {
+  const dispatch = useDispatch()
+
+  const { state } = props
 
   function changeCheckboxState(evt) {
     const value = evt.target.getAttribute('data-value')
-    setState({ guestRatingMin: value })
+    dispatch(
+      hotelListSlice.actions.setFilters({
+        guestRating: {
+          guestRatingMin: state.guestRatingMin === value ? undefined : value,
+        },
+      })
+    )
   }
 
   return (

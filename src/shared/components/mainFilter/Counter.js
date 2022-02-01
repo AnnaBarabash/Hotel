@@ -12,28 +12,21 @@ import styles from './Counter.module.scss'
 export function Counter(props) {
   const dispatch = useDispatch()
 
-  const { type } = props
-
-  // Set the initial count state to zero, 0
-  const [count, setCount] = useState(0)
+  const { type, count } = props
 
   // Create handleIncrement event handler
   const handleIncrement = () => {
     if (count < 6) {
-      setCount(count + 1)
+      dispatch(hotelListSlice.actions.setFilters({ [type]: count + 1 }))
     }
   }
 
   //Create handleDecrement event handler
   const handleDecrement = () => {
     if (count > 0) {
-      setCount(count - 1)
+      dispatch(hotelListSlice.actions.setFilters({ [type]: count - 1 }))
     }
   }
-
-  useEffect(() => {
-    dispatch(hotelListSlice.actions.setFilters({ counter: { [type]: count } }))
-  }, [dispatch, type, count])
 
   return (
     <div className={styles.counter}>

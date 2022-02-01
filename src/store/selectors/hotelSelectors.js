@@ -4,6 +4,17 @@ export function getHotelDetails(state) {
   return get(state, ['hotel', 'hotelDetails', 'data', 'body'])
 }
 
+export function getHotelName(state) {
+  return get(state, [
+    'hotel',
+    'hotelDetails',
+    'data',
+    'body',
+    'propertyDescription',
+    'name',
+  ])
+}
+
 export function getHotelTransportLocations(state) {
   return get(state, [
     'hotel',

@@ -12,6 +12,7 @@
     background-color: rgba(44, 31, 31, 0.157);
     font-weight: 600;
     color: rgb(126, 126, 126);
+    user-select: none;
     cursor: pointer;
 
     &.checked {

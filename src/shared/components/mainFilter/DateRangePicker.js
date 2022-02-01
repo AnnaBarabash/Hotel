@@ -2,29 +2,29 @@ import { MobileDateRangePicker as MuiDateRangePicker } from '@mui/lab'
 import AdapterDateFns from '@mui/lab/AdapterDateFns'
 import LocalizationProvider from '@mui/lab/LocalizationProvider'
 import TextField from '@mui/material/TextField'
-import moment from 'moment'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { useDispatch } from 'react-redux'
 
-
-import { hotelListSlice } from '../../../store/slices/hotelListSlice';
+import { hotelListSlice } from '../../../store/slices/hotelListSlice'
 import styles from './DateRangePicker.module.scss'
 
-export function DateRangePicker() {
+export function DateRangePicker(props) {
   const dispatch = useDispatch()
 
-  const [value, setValue] = useState([null, null])
-  
-  useEffect(() => {
+  const { value } = props
+
+  const handleChange = (value) => {
     if (value[0] && value[1]) {
-      dispatch(hotelListSlice.actions.setFilters({
-        dates: {
-          checkIn: moment(value[0]).format('YYYY-MM-DD'),
-          checkOut: moment(value[1]).format('YYYY-MM-DD'),
-        }
-      }))
+      dispatch(
+        hotelListSlice.actions.setFilters({
+          dates: {
+            checkIn: value[0],
+            checkOut: value[1],
+          },
+        })
+      )
     }
-  }, [dispatch, value])
+  }
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -32,8 +32,10 @@ export function DateRangePicker() {
         startText='Check-in'
         endText='Check-out'
         value={value}
+        disablePast
+        disableCloseOnSelect={false}
         onChange={(newValue) => {
-          setValue(newValue)
+          handleChange(newValue)
         }}
         renderInput={(startProps, endProps) => (
           <React.Fragment>
