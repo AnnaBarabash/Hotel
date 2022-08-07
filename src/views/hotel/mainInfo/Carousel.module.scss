@@ -1,0 +1,46 @@
+.carousel {
+  max-width: 1000px;
+  max-height: 550px;
+  margin: 0 auto;
+  padding: 10px 0;
+  box-sizing: content-box;
+
+  @media screen and (max-width: 500px) {
+    max-height: 330px;
+  }
+
+  & .slide {
+    overflow: hidden;
+    outline: none;
+
+    & .imgWrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-height: 550px;
+    }
+  }
+
+  & .arrow {
+    position: absolute;
+    top: calc(50% - 6px);
+    display: inline-block;
+    padding: 12px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    z-index: 10000;
+    cursor: pointer;
+
+    &.right {
+      right: 20px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+
+    &.left {
+      left: 20px;
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+    }
+  }
+}

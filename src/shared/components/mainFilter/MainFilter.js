@@ -19,8 +19,8 @@ export function MainFilter() {
   const dates = draftFilters?.dates
     ? [draftFilters.dates.checkIn, draftFilters.dates.checkOut]
     : [null, null]
-  const rooms = draftFilters?.rooms || 0
-  const persons = draftFilters?.persons || 0
+  const rooms = draftFilters?.rooms || 1
+  const persons = draftFilters?.persons || 1
 
   const isSearchEnabled = dates.every((el) => el) && rooms > 0 && persons > 0
 
@@ -31,11 +31,7 @@ export function MainFilter() {
   return (
     <>
       <Link to={HOME_PATH} className={styles.logoLink}>
-        <img
-          className={styles.img}
-          src='https://www.hotel.info/assets/booking/images/logo.png'
-          alt='logo'
-        />
+        <span>HOTEL</span> NY
       </Link>
       <div className={styles.container}>
         <AppContainer>

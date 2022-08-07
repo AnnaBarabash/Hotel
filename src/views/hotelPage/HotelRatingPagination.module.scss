@@ -1,9 +1,0 @@
-.pagination {
-  display: flex;
-  justify-content: center;
-}
-@media screen and (max-width: 600px) and (min-device-width: 320px) {
-  .pagination {
-    display: none;
-  }
-}

@@ -1,0 +1,22 @@
+.container {
+  padding: 20px;
+  background-color: white;
+
+  &.withSeparator {
+    margin-bottom: 2px;
+  }
+
+  & .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ff7500;
+
+    & span {
+      display: block;
+      padding-top: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #404040;
+    }
+  }
+}

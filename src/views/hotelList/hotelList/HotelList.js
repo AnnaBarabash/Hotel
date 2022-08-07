@@ -4,10 +4,10 @@ import { useSelector } from 'react-redux'
 import { SORT_BY } from '../../../shared/constants'
 import { getDraftFilters } from '../../../store/selectors/hotelListSelectors'
 import { getHotelList } from '../../../store/selectors/hotelListSelectors'
+import styles from './HotelList.module.scss'
 import { HotelListEl } from './HotelListEl'
 import { Pagination } from './Pagination'
 import { SortBy } from './SortBy'
-import styles from './HotelList.module.scss'
 
 export function HotelList() {
   const hotelList = useSelector(getHotelList)

@@ -1,5 +1,3 @@
-import AdjustIcon from '@mui/icons-material/Adjust'
-import HomeRoundedIcon from '@mui/icons-material/HomeRounded'
 import Rating from '@mui/material/Rating'
 import Tooltip from '@mui/material/Tooltip'
 import { toLower } from 'lodash'
@@ -7,6 +5,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import { getHotelPath } from '../../../routes'
+import { DistanceIcon } from '../../../shared/icons/DistanceIcon';
+import { LocationIcon } from '../../../shared/icons/LocationIcon';
 import styles from './HotelListEl.module.scss'
 
 export function HotelListEl(props) {
@@ -37,7 +37,7 @@ export function HotelListEl(props) {
             />
           </div>
           <div className={styles.location}>
-            <HomeRoundedIcon classes={{ root: styles.icon }} />
+            <LocationIcon />
             {`${streetAddress}, ${postalCode} ${locality}`}
           </div>
           <Tooltip
@@ -45,7 +45,7 @@ export function HotelListEl(props) {
             placement='bottom-start'
           >
             <div className={styles.location}>
-              <AdjustIcon classes={{ root: styles.icon }} />
+              <DistanceIcon />
               {hotelData.landmarks[0].distance}
             </div>
           </Tooltip>
@@ -66,7 +66,9 @@ export function HotelListEl(props) {
               )}
             </div>
             <Link to={getHotelPath(hotelData.id)} target='_blank'>
-              <button className={styles.button}>SHOW ROOMS</button>
+              <button className={styles.button} tabIndex='-1'>
+                SHOW ROOMS
+              </button>
             </Link>
           </div>
         </div>

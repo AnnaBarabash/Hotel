@@ -38,6 +38,7 @@ export function GuestRatingFilter(props) {
           )}
           onClick={changeCheckboxState}
           data-value='6'
+          tabIndex='0'
         >
           6.0 +
         </div>
@@ -49,6 +50,7 @@ export function GuestRatingFilter(props) {
           )}
           onClick={changeCheckboxState}
           data-value='7'
+          tabIndex='0'
         >
           7.0 +
         </div>
@@ -60,6 +62,7 @@ export function GuestRatingFilter(props) {
           )}
           onClick={changeCheckboxState}
           data-value='8'
+          tabIndex='0'
         >
           8.0 +
         </div>
@@ -70,6 +73,7 @@ export function GuestRatingFilter(props) {
           )}
           onClick={changeCheckboxState}
           data-value='9'
+          tabIndex='0'
         >
           9.0 +
         </div>

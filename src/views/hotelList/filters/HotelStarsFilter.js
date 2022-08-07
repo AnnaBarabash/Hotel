@@ -28,7 +28,7 @@ export function HotelStarsFilter(props) {
 
   return (
     <>
-      <h4>HOTEL DE STARS</h4>
+      <h4>HOTEL NY STARS</h4>
       <div className={styles.rating}>
         <Rating
           name='rating'

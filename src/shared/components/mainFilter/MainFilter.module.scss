@@ -2,9 +2,14 @@
   position: absolute;
   top: 30px;
   left: 30px;
+  font-size: 36px;
+  font-weight: 600;
+  color: #404040;
+  letter-spacing: -2px;
+  text-decoration: none;
 
-  & .img {
-    height: 32px;
+  & span {
+    color: #ff7500;
   }
 }
 
@@ -13,14 +18,14 @@
   align-items: center;
   min-height: 700px;
   margin-bottom: 20px;
-  background-image: url(https://www.hotel.info/assets/booking/js/b1c8d4823d86d339960e66643f23b68a.jpg);
+  background-image: url(https://www.hotel.info/assets/booking/js/56a5e577b9fcc8523547287a16226865.jpg);
   background-size: cover;
 
   & .filter {
     margin-top: 20px;
     padding: 20px;
     background-color: rgb(255, 255, 255);
-    color: rgb(166, 166, 166);
+    color: #404040;
 
     & .countersWrapper {
       display: flex;

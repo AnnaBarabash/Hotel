@@ -62,9 +62,11 @@
         color: #8b8b8b;
         cursor: default;
 
-        & .icon {
-          margin-right: 3px;
-          font-size: 18px;
+        & svg {
+          margin-right: 4px;
+          min-width: 12px;
+          height: 12px;
+          fill: #8b8b8b;
         }
       }
     }

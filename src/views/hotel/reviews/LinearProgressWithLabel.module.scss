@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+
+  & .progressBar {
+    width: calc(100% - 40px);
+
+    &.colorPrimary {
+      background-color: rgba(200, 200, 200, 0.3);
+      height: 20px;
+    }
+
+    & .bar1Determinate {
+      background-color: #ff7500;
+    }
+  }
+
+  & .label {
+    font-weight: 600;
+    color: #ff7500;
+  }
+}
