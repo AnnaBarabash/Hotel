@@ -8,9 +8,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![alt text](https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_d3.png?raw=true)
 
 ## Mobile version screenshots
-![alt text](https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_m1.png?raw=true)
-![alt text](https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_m2.png?raw=true)
-![alt text](https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_m3.png?raw=true)
+<details>
+<summary>Home page</summary>
+<img src='https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_m1.png' />
+</details>
+<details>
+<summary>Search results page</summary>
+<img src='https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_m2.png' />
+</details>
+<details>
+<summary>Hotel page</summary>
+<img src='https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_m3.png' />
+</details>
 
 ## Available Scripts
 
