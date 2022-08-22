@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# Tel-Ran graduation project
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Desktop version screenshots
+![alt text](https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_d1.png?raw=true)
+![alt text](https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_d2.png?raw=true)
+![alt text](https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_d3.png?raw=true)
+
+## Mobile version screenshots
+![alt text](https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_m1.png?raw=true)
+![alt text](https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_m2.png?raw=true)
+![alt text](https://github.com/AnnaBarabash/hotel-images/blob/main/images/hotel_m3.png?raw=true)
 
 ## Available Scripts
 
