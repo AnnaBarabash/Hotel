@@ -8,8 +8,8 @@ import { getHotelReviews, getHotelReviewsOverall } from '../../../store/selector
 import { BlockTitle } from '../BlockTitle'
 import { CircularProgressWithLabel } from './CircularProgressWithLabel'
 import { LinearProgressWithLabel } from './LinearProgressWithLabel'
-import { Pagination } from './Pagination'
 import styles from './Reviews.module.scss'
+import { ReviewsPagination } from './ReviewsPagination'
 import { Section } from './Section'
 
 export function Reviews() {
@@ -47,7 +47,7 @@ export function Reviews() {
                 </div>
               ))}
             </div>
-            <Pagination />
+            <ReviewsPagination />
           </Section>
         </div>
         <div className={styles.sec12}>

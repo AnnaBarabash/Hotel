@@ -40,7 +40,7 @@ export function DateRangePicker(props) {
         renderInput={(startProps, endProps) => (
           <React.Fragment>
             <TextField {...startProps} classes={{ root: styles.textFiled }} />
-            <span className={styles.divider}>to</span>
+            <span className={styles.divider}>—</span>
             <TextField {...endProps} classes={{ root: styles.textFiled }} />
           </React.Fragment>
         )}

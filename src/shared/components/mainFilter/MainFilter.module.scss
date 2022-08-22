@@ -3,7 +3,7 @@
   top: 30px;
   left: 30px;
   font-size: 36px;
-  font-weight: 600;
+  font-weight: 700;
   color: #404040;
   letter-spacing: -2px;
   text-decoration: none;
@@ -21,6 +21,23 @@
   background-image: url(https://www.hotel.info/assets/booking/js/56a5e577b9fcc8523547287a16226865.jpg);
   background-size: cover;
 
+  & .promo {
+    margin-bottom: 24px;
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgb(0 0 0 / 12%), 0 3px 6px rgb(0 0 0 / 28%);
+    color: white;
+
+    & span {
+      white-space: nowrap;
+    }
+
+    @media screen and (max-width: 1120px) {
+      padding: 0 20px;
+      font-size: 24px;
+    }
+  }
+
   & .filter {
     margin-top: 20px;
     padding: 20px;
@@ -35,6 +52,29 @@
       @media screen and (max-width: 500px) {
         flex-direction: column;
         align-items: center;
+      }
+    }
+  }
+
+  & .hoatline {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+
+    @media screen and (max-width: 1120px) {
+      padding-right: 20px;
+    }
+
+    & .content {
+      padding: 10px 30px;
+      border-radius: 4px;
+      background-color: white;
+      text-align: center;
+      color: #ff7500;
+
+      & .number {
+        font-size: 18px;
+        font-weight: 700;
       }
     }
   }

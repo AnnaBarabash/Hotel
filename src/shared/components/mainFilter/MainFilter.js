@@ -35,6 +35,7 @@ export function MainFilter() {
       </Link>
       <div className={styles.container}>
         <AppContainer>
+          <div className={styles.promo}>Book hotels quickly and easily on <span>HOTEL NY</span></div>
           <div className={styles.filter}>
             <Grid container columnSpacing={4}>
               <Grid xs={12} lg={3} item>
@@ -53,6 +54,12 @@ export function MainFilter() {
                 <SearchButton isEnabled={isSearchEnabled} onSearch={onSearch} />
               </Grid>
             </Grid>
+          </div>
+          <div className={styles.hoatline}>
+            <div className={styles.content}>
+              <div>24H service hotline</div>
+              <div className={styles.number}>+100 - 100 100 22</div>
+            </div>
           </div>
         </AppContainer>
       </div>

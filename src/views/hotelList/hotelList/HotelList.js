@@ -6,7 +6,7 @@ import { getDraftFilters } from '../../../store/selectors/hotelListSelectors'
 import { getHotelList } from '../../../store/selectors/hotelListSelectors'
 import styles from './HotelList.module.scss'
 import { HotelListEl } from './HotelListEl'
-import { Pagination } from './Pagination'
+import { HotelsPagination } from './HotelsPagination'
 import { SortBy } from './SortBy'
 
 export function HotelList() {
@@ -19,11 +19,12 @@ export function HotelList() {
   return (
     <div className={styles.container}>
       <SortBy sortBy={sortBy} />
-      <Pagination page={page} />
+      <HotelsPagination page={page} />
       {hotelList &&
         hotelList.map((hotelData) => (
           <HotelListEl key={hotelData.id} hotelData={hotelData} />
         ))}
+      <HotelsPagination page={page} />
     </div>
   )
 }
